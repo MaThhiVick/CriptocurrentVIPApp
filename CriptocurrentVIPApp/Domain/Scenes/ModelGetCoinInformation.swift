@@ -11,10 +11,11 @@ enum CreateCoin {
         struct Request {}
         
         struct Response {
-            var coinData: Criptocurrent
+            var coinData: [Datum]
         }
         
         struct ViewModel {
-        }//tem que pensar
+            var coinList: CoinList
+        }
     }
 }

@@ -23,8 +23,10 @@ extension InterectorGetCoinInformation: GetCoinInformationLogic {
         worker.fetchRepos { data in
             self.coinsData = data
             print(data ?? "Nao achei nenhum valor aque, vc esta lokao")
+            
+            let response = CreateCoin.LoadCoin.Response(coinData: self.coinsData!.data)
+            
+            self.presenter?.presentCoinData(response: response)
         }
-        let response = CreateCoin.LoadCoin.Response(coinData: coinsData!)
-        presenter?.presentCoinData(response: response)
     }
 }
