@@ -13,7 +13,7 @@ protocol GetCoinInformationDisplayLogic {
 
 extension ViewGetCoinInformation: GetCoinInformationDisplayLogic {
     func displayCoinData(viewModel: CreateCoin.LoadCoin.ViewModel) {
-        coinList.coinList = viewModel.coinList.coinList
+        coinList.coinList = viewModel.coinList
         
     }
     
@@ -40,7 +40,7 @@ struct ViewGetCoinInformation: View {
                         }
                     }
                 }
-            }
+            }.navigationTitle("Crypto Coins")
         }.onAppear{
             fetchCoinData()
         }

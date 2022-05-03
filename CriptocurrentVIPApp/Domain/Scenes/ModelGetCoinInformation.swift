@@ -11,11 +11,11 @@ enum CreateCoin {
         struct Request {}
         
         struct Response {
-            var coinData: [Datum]
+            var coinData: [Coin]
         }
         
         struct ViewModel {
-            var coinList: CoinList
+            var coinList: [Coin]
         }
     }
 }
