@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2F0117DA28208DA300BED30A /* Cryptocoins.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0117D928208DA300BED30A /* Cryptocoins.swift */; };
+		2F39A08528248E0B00B4A5B3 /* CoinInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F39A08428248E0B00B4A5B3 /* CoinInformation.swift */; };
 		2F66FD5E281ABB40005F3996 /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F66FD5D281ABB40005F3996 /* Coin.swift */; };
 		2FDDAB802818857D008E9220 /* CriptocurrentVIPAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDDAB7F2818857D008E9220 /* CriptocurrentVIPAppApp.swift */; };
 		2FDDAB822818857D008E9220 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDDAB812818857D008E9220 /* ContentView.swift */; };
@@ -23,6 +24,7 @@
 
 /* Begin PBXFileReference section */
 		2F0117D928208DA300BED30A /* Cryptocoins.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cryptocoins.swift; sourceTree = "<group>"; };
+		2F39A08428248E0B00B4A5B3 /* CoinInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinInformation.swift; sourceTree = "<group>"; };
 		2F66FD5D281ABB40005F3996 /* Coin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coin.swift; sourceTree = "<group>"; };
 		2FDDAB7C2818857D008E9220 /* CriptocurrentVIPApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CriptocurrentVIPApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FDDAB7F2818857D008E9220 /* CriptocurrentVIPAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CriptocurrentVIPAppApp.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 				2FDDAB9A28188C89008E9220 /* ViewGetCoinInformation.swift */,
 				2FDDAB9E28188CC3008E9220 /* InteractorGetCoinInformation.swift */,
 				2FDDABA028188CC7008E9220 /* PresenterGetCoinInformation.swift */,
+				2F39A08428248E0B00B4A5B3 /* CoinInformation.swift */,
 				2FDDABA228188CCA008E9220 /* ModelGetCoinInformation.swift */,
 				2FDDABA428188CD2008E9220 /* WorkerGetCoinInformation.swift */,
 				2F66FD5D281ABB40005F3996 /* Coin.swift */,
@@ -194,6 +197,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2FDDABA128188CC7008E9220 /* PresenterGetCoinInformation.swift in Sources */,
+				2F39A08528248E0B00B4A5B3 /* CoinInformation.swift in Sources */,
 				2FDDAB9F28188CC3008E9220 /* InteractorGetCoinInformation.swift in Sources */,
 				2FDDABA528188CD2008E9220 /* WorkerGetCoinInformation.swift in Sources */,
 				2FDDAB9B28188C89008E9220 /* ViewGetCoinInformation.swift in Sources */,
