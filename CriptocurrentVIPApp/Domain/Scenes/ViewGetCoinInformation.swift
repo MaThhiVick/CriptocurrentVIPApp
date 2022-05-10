@@ -36,7 +36,8 @@ struct ViewGetCoinInformation: View {
                         HStack {
                             Text(coin.name)
                             Spacer()
-                            NavigationLink("$\(coin.value, specifier: "%.2f")", destination: CoinInformation(coinName: coin.name, coinValue: coin.value))
+                            NavigationLink("$\(coin.value, specifier: "%.2f")", destination: SwiftUIView(coinName: coin.name, coinValue: coin.value))
+//                            NavigationLink("$\(coin.value, specifier: "%.2f")", destination: ViewCoinInformation(coinName: coin.name, coinValue: coin.value))
                         }
                     }
                 }
