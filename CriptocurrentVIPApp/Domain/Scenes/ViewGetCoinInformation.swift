@@ -36,6 +36,7 @@ struct ViewGetCoinInformation: View {
                         HStack {
                             Text(coin.name)
                             Spacer()
+                            //TODO: presenter change value formatation.
                             NavigationLink("$\(coin.value, specifier: "%.2f")", destination: ViewCoinInformation(coinName: coin.name, coinValue: coin.value).configureView())
                         }
                     }

@@ -76,7 +76,10 @@ struct ViewCoinInformation: View {
                     .padding()
                 }
                 List {
-                    ForEach(boughtListCoin.coinBoughtList) { coin in
+                    //TODO: presenter make this filter
+                    ForEach(boughtListCoin.coinBoughtList.filter {
+                        $0.name == coinName
+                    }) { coin in
                         HStack {
                             Text(String(coin.quantity))
                             Text(String(coin.value))
