@@ -6,6 +6,8 @@ It's an app which shows some information about crypto coins.
 - [x] Prepare the App to use VIP
 - [x] View shows Coin's name and price
 - [x] Another view for the coin touched 
-- [ ] Make the second view works with VIP
-- [ ] Implementing User default
-- [ ] Local Notification
+- [x] Make the second view works with VIP
+- [x] Implementing User default
+- [ ] Deleting a bought coin in the coin View
+- [ ] Adding Average elements. 
+- [ ] Push Notification
