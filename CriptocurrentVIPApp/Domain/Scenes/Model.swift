@@ -8,10 +8,24 @@
 import Foundation
 enum CoinSelected {
     enum LoadCoin {
-        struct Request{}
+        struct Request {}
         
-        struct Response{}
+        struct Response {
+            var coinLoaded: [InformationBoughtCoin]
+        }
         
-        struct ViewModel {}
+        struct ViewModel {
+            var coinBought: [InformationBoughtCoin]
+        }
+    }
+    
+    enum SaveCoin {
+        struct Request {
+            var coinBought: InformationBoughtCoin
+        }
+        
+        struct Response {}
+        
+        struct ViewModel{}
     }
 }

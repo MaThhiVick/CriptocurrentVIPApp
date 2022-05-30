@@ -28,7 +28,7 @@ struct ViewGetCoinInformation: View {
     var interector: GetCoinInformationLogic?
     
     var body: some View {
-        NavigationView{
+        NavigationView {
             VStack {
                 List {
                     ForEach(coinList.coinList, id: \.name) {
@@ -36,12 +36,13 @@ struct ViewGetCoinInformation: View {
                         HStack {
                             Text(coin.name)
                             Spacer()
-                            NavigationLink("$\(coin.value, specifier: "%.2f")", destination: ViewCoinInformation(coinName: coin.name, coinValue: coin.value))
+                            //TODO: presenter change value formatation.
+                            NavigationLink("$\(coin.value, specifier: "%.2f")", destination: ViewCoinInformation(coinName: coin.name, coinValue: coin.value).configureView())
                         }
                     }
                 }
             }.navigationTitle("Crypto Coins")
-        }.onAppear{
+        }.onAppear {
             fetchCoinData()
         }
     }
