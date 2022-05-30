@@ -6,11 +6,12 @@
 //
 
 import Foundation
+
 class SaveLoadCoinWorker {
     private let defaults = UserDefaults.standard
 
     func save(coin: InformationBoughtCoin) {
-        var listOfCoin = load() //caso nao tenha nada e fazer um append
+        var listOfCoin = load()
         listOfCoin.append(coin)
         let encoder = JSONEncoder()
         if let encoded = try? encoder.encode(listOfCoin) {
