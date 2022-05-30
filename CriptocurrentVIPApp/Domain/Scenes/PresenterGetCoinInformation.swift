@@ -18,9 +18,10 @@ extension PresenterGetCoinInformation: GetCoinInformationPresentation {
     func presentCoinData(response: CreateCoin.LoadCoin.Response) {
         
         let coinList = response.coinData
-        
+                
         let viewModel = CreateCoin.LoadCoin.ViewModel(
         coinList: coinList)
+        
         
         DispatchQueue.main.async {
             self.view?.displayCoinData(viewModel: viewModel)
