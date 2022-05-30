@@ -7,9 +7,13 @@
 
 import Foundation
 
-struct InformationBoughtCoin: Identifiable {
+struct InformationBoughtCoin: Identifiable, Codable{
     var id = UUID()
     var name: String
     var value: Double
     var quantity: Double
+}
+
+class InformationBoughtCoinList: ObservableObject {
+    @Published var coinBoughtList: [InformationBoughtCoin] = []
 }
