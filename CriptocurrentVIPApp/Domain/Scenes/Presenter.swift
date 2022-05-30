@@ -18,7 +18,8 @@ class PresenterCoinSelected {
 extension PresenterCoinSelected: CoinSelectedPresentation {
     
     func presentCoin(response: CoinSelected.LoadCoin.Response) {
-        let viewModel = CoinSelected.LoadCoin.ViewModel.init(coinBought: response.coinLoaded)
+        
+        let viewModel = CoinSelected.LoadCoin.ViewModel.init(coinBought: response.coinLoaded.reversed())
         self.view?.displayCoinData(viewModel: viewModel)
     }
 }

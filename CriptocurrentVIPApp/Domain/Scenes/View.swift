@@ -65,10 +65,11 @@ struct ViewCoinInformation: View {
                         .keyboardType(.decimalPad)
                     
                     Button {
-                        //TODO: if input is 0 in both or in one of them, the save can't work
-                        let newCoin = InformationBoughtCoin(name: coinName, value: coinPrice, quantity: coinQuantity)
-                        saveCoin(dataCoin: newCoin)
-                        loadCoinBought()
+                        if coinPrice != 0 && coinQuantity != 0 {
+                            let newCoin = InformationBoughtCoin(name: coinName, value: coinPrice, quantity: coinQuantity)
+                            saveCoin(dataCoin: newCoin)
+                            loadCoinBought()
+                        }
                     } label: {
                         Image(systemName: "plus")
                             .foregroundColor(Color.blue)
@@ -76,7 +77,6 @@ struct ViewCoinInformation: View {
                     .padding()
                 }
                 List {
-                    //TODO: presenter make this filter
                     ForEach(boughtListCoin.coinBoughtList.filter {
                         $0.name == coinName
                     }) { coin in

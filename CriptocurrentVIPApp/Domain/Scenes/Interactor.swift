@@ -24,7 +24,5 @@ extension InterectorCoinSelectedInformation: CoinSelectedInformationLogic {
         
         let response = CoinSelected.LoadCoin.Response.init(coinLoaded: worker.load())
         self.presenter?.presentCoin(response: response)
-        
-        
     }
 }
