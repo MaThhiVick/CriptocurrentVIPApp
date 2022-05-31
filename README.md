@@ -8,6 +8,6 @@ It's an app which shows some information about crypto coins.
 - [x] Another view for the coin touched 
 - [x] Make the second view works with VIP
 - [x] Implementing User default
-- [ ] Deleting a bought coin in the coin View
+- [x] Deleting a bought coin in the coin View
 - [ ] Adding Average elements. 
 - [ ] Push Notification
