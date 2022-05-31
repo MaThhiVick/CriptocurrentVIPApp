@@ -10,4 +10,5 @@ It's an app which shows some information about crypto coins.
 - [x] Implementing User default
 - [x] Deleting a bought coin in the coin View
 - [ ] Adding Average elements. 
+- [ ] adding swift lint?
 - [ ] Push Notification
