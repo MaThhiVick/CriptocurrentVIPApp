@@ -11,7 +11,7 @@ enum CoinSelected {
         struct Request {}
         
         struct Response {
-            var coinLoaded: [InformationBoughtCoin]
+            var coinListLoaded: [InformationBoughtCoin]
         }
         
         struct ViewModel {
@@ -28,4 +28,16 @@ enum CoinSelected {
         
         struct ViewModel{}
     }
+    
+    enum DeleteCoin {
+        struct Request {
+            var newListCoin: [InformationBoughtCoin]
+        }
+        
+        struct Response {}
+        
+        struct ViewModel{}
+    }
+
+    
 }

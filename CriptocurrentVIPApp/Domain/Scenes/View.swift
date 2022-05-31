@@ -14,11 +14,8 @@ protocol CoinSelectedDiplayLogic {
 extension ViewCoinInformation: CoinSelectedDiplayLogic {
     func displayCoinData(viewModel: CoinSelected.LoadCoin.ViewModel) {
         boughtListCoin.coinBoughtList = viewModel.coinBought
-        
-        print("printando a lista: ", boughtListCoin.coinBoughtList)
     }
     
-    //to save the coin and send info for user default
     func saveCoin(dataCoin: InformationBoughtCoin) {
         let request = CoinSelected.SaveCoin.Request(coinBought: dataCoin)
         interector?.saveCoinBought(request: request)
@@ -27,6 +24,11 @@ extension ViewCoinInformation: CoinSelectedDiplayLogic {
     func loadCoinBought() {
         let request = CoinSelected.LoadCoin.Request()
         interector?.loadCoinBought(request: request)
+    }
+    
+    func newListCoin(newCoinList: [InformationBoughtCoin]) {
+        let request = CoinSelected.DeleteCoin.Request(newListCoin: newCoinList)
+        interector?.newCoinList(request: request)
     }
 }
 
@@ -79,12 +81,14 @@ struct ViewCoinInformation: View {
                 List {
                     ForEach(boughtListCoin.coinBoughtList.filter {
                         $0.name == coinName
+                        //TODO: make this filter happining in presenter
                     }) { coin in
                         HStack {
                             Text(String(coin.quantity))
                             Text(String(coin.value))
                         }
                     }
+                    .onDelete(perform: self.deleteItem(at:))
                 }
                 
             }
@@ -93,4 +97,9 @@ struct ViewCoinInformation: View {
                 loadCoinBought()
             }
     }
+    
+    private func deleteItem(at indexSet: IndexSet) {
+        self.boughtListCoin.coinBoughtList.remove(atOffsets: indexSet)
+        newListCoin(newCoinList: boughtListCoin.coinBoughtList.reversed())
+      }
 }
