@@ -4,6 +4,8 @@ protocol CoinSelectedInformationLogic {
     func saveCoinBought(request:
                          CoinSelected.SaveCoin.Request)
     func loadCoinBought(request: CoinSelected.LoadCoin.Request)
+    
+    func newCoinList(request: CoinSelected.DeleteCoin.Request)
 }
 
 class InterectorCoinSelectedInformation {
@@ -22,7 +24,13 @@ extension InterectorCoinSelectedInformation: CoinSelectedInformationLogic {
     func loadCoinBought(request: CoinSelected.LoadCoin.Request) {
         worker = SaveLoadCoinWorker()
         
-        let response = CoinSelected.LoadCoin.Response.init(coinLoaded: worker.load())
+        let response = CoinSelected.LoadCoin.Response.init(coinListLoaded: worker.load())
         self.presenter?.presentCoin(response: response)
+    }
+    
+    func newCoinList(request: CoinSelected.DeleteCoin.Request) {
+        worker = SaveLoadCoinWorker()
+        
+        worker.saveNewList(newList: request.newListCoin)
     }
 }

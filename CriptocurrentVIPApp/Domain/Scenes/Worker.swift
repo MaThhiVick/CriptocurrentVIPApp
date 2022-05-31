@@ -35,4 +35,13 @@ class SaveLoadCoinWorker {
             return []
         }
     }
+    
+    func saveNewList(newList: [InformationBoughtCoin]) {
+        let encoder = JSONEncoder()
+        if let encoded = try? encoder.encode(newList) {
+            defaults.set(encoded, forKey: "ListOfCoinsBought")
+
+        }
+
+    }
 }
