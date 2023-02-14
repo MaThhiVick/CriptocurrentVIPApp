@@ -6,7 +6,11 @@
 // coingeckoAPI
 
 import Foundation
-class RequestWorker {
+protocol RequestCoinProtocol {
+    func fetchRequest(completionHandler: @escaping (Criptocoin?, CoinListError?) -> Void)
+}
+
+class RequestWorker: RequestCoinProtocol {
     private var urlSession: URLSession
     private var urlString: String
     

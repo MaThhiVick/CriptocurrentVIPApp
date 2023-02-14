@@ -12,6 +12,8 @@ enum CoinListError: LocalizedError, Equatable {
     case emptyData
     case decodeError
     case failedRequest(description: String)
+    case requestReturnedError
+    case coinIsNil
     
     var errorDescription: String? {
         switch self {
@@ -23,6 +25,10 @@ enum CoinListError: LocalizedError, Equatable {
             return "An error occur during decode"
         case .failedRequest(let description):
             return description
+        case .requestReturnedError:
+            return "Request returned error"
+        case .coinIsNil:
+            return "CoinList returned is nil"
         }
     }
 }
