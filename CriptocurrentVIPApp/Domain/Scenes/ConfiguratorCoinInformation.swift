@@ -10,7 +10,7 @@ import SwiftUI
 extension ViewGetCoinInformation {
     func configureView() -> some View {
         var view = self
-        let interector = InterectorGetCoinInformation()
+        let interector = InteractorGetCoinInformation(worker: RequestWorker())
         let presenter = PresenterGetCoinInformation()
         view.interector = interector
         interector.presenter = presenter
