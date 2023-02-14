@@ -12,6 +12,10 @@ class Coin: ObservableObject {
     @Published var value: Double = 0.0
 }
 
-class CoinList: ObservableObject {
+class CoinList: ObservableObject, Equatable{
     @Published var coinList: [Coin] = []
+    
+    static func == (lhs: CoinList, rhs: CoinList) -> Bool {
+        true
+    }
 }
