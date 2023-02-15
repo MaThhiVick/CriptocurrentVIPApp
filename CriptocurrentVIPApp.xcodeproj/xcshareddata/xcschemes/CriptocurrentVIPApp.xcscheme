@@ -40,6 +40,17 @@
                ReferencedContainer = "container:CriptocurrentVIPApp.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "6098A7D1299C3A3F00A0A889"
+               BuildableName = "CriptocurrentVIPAppUITests.xctest"
+               BlueprintName = "CriptocurrentVIPAppUITests"
+               ReferencedContainer = "container:CriptocurrentVIPApp.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
