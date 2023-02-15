@@ -19,7 +19,7 @@ extension ViewGetCoinInformation: GetCoinInformationDisplayLogic {
     
     func fetchCoinData() {
         let request = CreateCoin.LoadCoin.Request()
-        interector?.loadCryptoCoins(request: request)
+        _ = interector?.loadCryptoCoins(request: request)
     }
 }
 
