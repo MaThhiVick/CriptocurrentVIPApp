@@ -22,6 +22,7 @@ final class InteractorGetCoinInformationTests
         workerMock = nil
         testSubject = nil
     }
+    // TODO: Create a test for a case which receive data nil
     
     func testLoadCryptoCoins_WhenMethodReceiveDataSuccessfull_ReturnsSuccess() {
         // Given
