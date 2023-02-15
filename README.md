@@ -9,6 +9,9 @@ It's an app which shows some information about crypto coins.
 - [x] Make the second view works with VIP
 - [x] Implementing User default
 - [x] Deleting a bought coin in the coin View
+- [x] Implementing Unit test
+- [x] Implementing UI test
+- [x] Implementing CI
 - [ ] Adding Average elements. 
 - [ ] adding swift lint?
 - [ ] Push Notification
