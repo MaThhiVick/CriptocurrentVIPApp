@@ -98,6 +98,7 @@ struct ViewCoinInformation: View {
             }
     }
     
+    #warning("This needs to be here?")
     private func deleteItem(at indexSet: IndexSet) {
         self.boughtListCoin.coinBoughtList.remove(atOffsets: indexSet)
         newListCoin(newCoinList: boughtListCoin.coinBoughtList.reversed())
