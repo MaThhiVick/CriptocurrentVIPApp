@@ -10,7 +10,7 @@ import SwiftUI
 extension ViewCoinInformation {
     func configureView() -> some View {
         var view = self
-        let interector = InterectorCoinSelectedInformation()
+        let interector = InterectorCoinSelectedInformation(worker: SaveLoadCoinWorker())
         let presenter = PresenterCoinSelected()
         view.interector = interector
         interector.presenter = presenter

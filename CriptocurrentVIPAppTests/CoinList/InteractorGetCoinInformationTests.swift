@@ -45,4 +45,5 @@ final class InteractorGetCoinInformationTests
         XCTAssertNil(testSubject.coinListData)
         XCTAssertEqual(error, CoinListError.requestReturnedError)
     }
+    // TODO: Test user default, Save, load, delete all, delete one coin.
 }

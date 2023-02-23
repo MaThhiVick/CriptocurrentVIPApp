@@ -37,9 +37,10 @@ struct ViewGetCoinInformation: View {
                             Text(coin.name)
                             Spacer()
                             NavigationLink("$\(coin.value, specifier: "%.2f")", destination: ViewCoinInformation(coinName: coin.name, coinValue: coin.value).configureView())
+                                .accessibilityIdentifier(coin.name)
                         }
                     }
-                }.accessibilityIdentifier("ListOfCoins")
+                }
             }.navigationTitle("Crypto Coins")
         }.onAppear {
             fetchCoinData()

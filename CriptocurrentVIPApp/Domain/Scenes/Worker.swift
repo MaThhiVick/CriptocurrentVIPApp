@@ -7,7 +7,13 @@
 
 import Foundation
 
-class SaveLoadCoinWorker {
+protocol MemoryManagerProtocol {
+    func save(coin: InformationBoughtCoin)
+    func load() -> [InformationBoughtCoin]
+    func saveNewList(newList: [InformationBoughtCoin])
+}
+
+class SaveLoadCoinWorker: MemoryManagerProtocol {
     private let defaults = UserDefaults.standard
 
     func save(coin: InformationBoughtCoin) {
@@ -40,8 +46,6 @@ class SaveLoadCoinWorker {
         let encoder = JSONEncoder()
         if let encoded = try? encoder.encode(newList) {
             defaults.set(encoded, forKey: "ListOfCoinsBought")
-
         }
-
     }
 }

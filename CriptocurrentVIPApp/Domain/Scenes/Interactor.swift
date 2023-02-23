@@ -10,7 +10,12 @@ protocol CoinSelectedInformationLogic {
 
 class InterectorCoinSelectedInformation {
     var presenter: CoinSelectedPresentation?
-    var worker: SaveLoadCoinWorker!
+    var worker: MemoryManagerProtocol
+    
+    init(presenter: CoinSelectedPresentation? = nil, worker: MemoryManagerProtocol) {
+        self.presenter = presenter
+        self.worker = worker
+    }
 }
 
 extension InterectorCoinSelectedInformation: CoinSelectedInformationLogic {
