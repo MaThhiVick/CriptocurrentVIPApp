@@ -15,3 +15,9 @@ It's an app which shows some information about crypto coins.
 - [ ] Adding Average elements. 
 - [ ] adding swift lint?
 - [ ] Push Notification
+- [ ] Refactor, swift package
+- [ ] swifinject
+- [ ] Firebase user data and login
+- [ ] Observability
+- [ ] deeplink?
+- [ ] 
